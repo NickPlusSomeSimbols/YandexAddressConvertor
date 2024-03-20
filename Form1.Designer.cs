@@ -44,7 +44,7 @@ partial class Form1
         // 
         button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         button1.ImageAlign = ContentAlignment.BottomCenter;
-        button1.Location = new Point(342, 562);
+        button1.Location = new Point(342, 493);
         button1.Name = "button1";
         button1.Size = new Size(143, 41);
         button1.TabIndex = 0;
@@ -66,7 +66,7 @@ partial class Form1
         // 
         // label2
         // 
-        label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         label2.AutoSize = true;
         label2.Location = new Point(12, 131);
         label2.Name = "label2";
@@ -76,9 +76,9 @@ partial class Form1
         // 
         // label3
         // 
-        label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         label3.AutoSize = true;
-        label3.Location = new Point(12, 213);
+        label3.Location = new Point(12, 199);
         label3.Name = "label3";
         label3.Size = new Size(168, 15);
         label3.TabIndex = 4;
@@ -87,9 +87,9 @@ partial class Form1
         // 
         // label4
         // 
-        label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        label4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         label4.AutoSize = true;
-        label4.Location = new Point(12, 293);
+        label4.Location = new Point(12, 265);
         label4.Name = "label4";
         label4.Size = new Size(87, 15);
         label4.TabIndex = 5;
@@ -97,36 +97,33 @@ partial class Form1
         // 
         // textBox1
         // 
-        textBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        textBox1.Location = new Point(12, 158);
+        textBox1.Location = new Point(12, 149);
         textBox1.Name = "textBox1";
-        textBox1.Size = new Size(565, 23);
+        textBox1.Size = new Size(579, 23);
         textBox1.TabIndex = 6;
         textBox1.TextChanged += textBox1_TextChanged;
         // 
         // textBox2
         // 
-        textBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        textBox2.Location = new Point(12, 240);
+        textBox2.Location = new Point(12, 217);
         textBox2.Name = "textBox2";
-        textBox2.Size = new Size(565, 23);
+        textBox2.Size = new Size(579, 23);
         textBox2.TabIndex = 7;
         textBox2.TextChanged += textBox2_TextChanged;
         // 
         // textBox3
         // 
-        textBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        textBox3.Location = new Point(12, 321);
+        textBox3.Location = new Point(12, 283);
         textBox3.Name = "textBox3";
-        textBox3.Size = new Size(565, 23);
+        textBox3.Size = new Size(579, 23);
         textBox3.TabIndex = 8;
         // 
         // richTextBox1
         // 
-        richTextBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        richTextBox1.Location = new Point(12, 389);
+        richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        richTextBox1.Location = new Point(12, 358);
         richTextBox1.Name = "richTextBox1";
-        richTextBox1.Size = new Size(800, 167);
+        richTextBox1.Size = new Size(800, 129);
         richTextBox1.TabIndex = 9;
         richTextBox1.Text = "";
         // 
@@ -134,7 +131,7 @@ partial class Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(824, 615);
+        ClientSize = new Size(824, 546);
         Controls.Add(richTextBox1);
         Controls.Add(textBox3);
         Controls.Add(textBox2);
@@ -161,4 +158,7 @@ partial class Form1
     private TextBox textBox2;
     private TextBox textBox3;
     private RichTextBox richTextBox1;
+    
+    public event EventHandler ButtonClick;
+
 }

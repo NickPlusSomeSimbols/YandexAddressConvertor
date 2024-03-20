@@ -1,5 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OfficeOpenXml;
+using System.Windows.Forms;
 using YandexConfertor_5;
 
 internal static class Program
@@ -7,10 +9,12 @@ internal static class Program
     [STAThread]
     private static void Main()
     {
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         ApplicationConfiguration.Initialize();
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(defaultValue: false);
         Form1 mainForm = new Form1();
+
         mainForm.ButtonClick += async delegate
         {
             await HandleButtonClick(mainForm);

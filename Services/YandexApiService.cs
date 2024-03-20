@@ -28,13 +28,17 @@ public class YandexApiService
                 }
                 catch (Exception)
                 {
-                    new LatLongModel
+                    LatLongModel item = new LatLongModel
                     {
                         Latitude = "unable to",
                         Longitude = "set"
                     };
+
+                    coordinates.Add(item);
+                    continue;
                 }
-                if (response != null)
+
+                if (response == null)
                 {
                     if (response.GeoObjectCollection.FeatureMember.Count == 0)
                     {
@@ -47,15 +51,24 @@ public class YandexApiService
                         continue;
                     }
                 }
-                else
+
+                try
                 {
-                    new LatLongModel
-                    {
-                        Latitude = "unable to",
-                        Longitude = "set"
-                    };
+                    string[] arrayTry = response.GeoObjectCollection.FeatureMember.FirstOrDefault().GeoObject.Point.Pos.Split(' ');
                 }
+                catch (Exception ex)
+                {
+                    LatLongModel item = new LatLongModel
+                    {
+                        Latitude = "Unexpected",
+                        Longitude = "error"
+                    };
+                    coordinates.Add(item);
+                    continue;
+                }
+
                 string[] array = response.GeoObjectCollection.FeatureMember.FirstOrDefault().GeoObject.Point.Pos.Split(' ');
+
                 LatLongModel item2 = new LatLongModel
                 {
                     Latitude = array[1],
