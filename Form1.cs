@@ -12,7 +12,7 @@ public partial class Form1 : Form
     {
         this.richTextBox1.AppendText(text + Environment.NewLine);
     }
-    
+
     public Form1()
     {
         InitializeComponent();
@@ -43,6 +43,11 @@ public partial class Form1 : Form
     }
 
     private void textBox1_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void richTextBox1_TextChanged(object sender, EventArgs e)
     {
 
     }

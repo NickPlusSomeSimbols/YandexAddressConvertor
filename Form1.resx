@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>This app takes as input two pathes, first to exel with one column of "Address" and second to exel where, 
+  <data name="textBox4.Text" xml:space="preserve">
+    <value>app takes as input two pathes, first to exel with one column of "Address" and second to exel where, 
 based on the first exel, data will be saved in "Address", "Latitude" and "Logitude" columns.
 Second path can refer to either an existing or non-existing file, in the latter case, a new file will be created. 
 (The program works with both .xls and .xlsx formats).
